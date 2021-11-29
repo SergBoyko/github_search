@@ -1,2 +1,2 @@
 # README
-Simply search for top 100 github repository
+Simply search for top 100 github public repository
