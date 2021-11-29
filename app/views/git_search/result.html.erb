@@ -1,0 +1,27 @@
+<br>
+<div class="text-center">
+<h1>Top 100 public repositories</h1>
+</div>
+<br>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Repository name</th>
+    <th scope="col">Author</th>
+    <th scope="col">Language</th>
+  </tr>
+  </thead>
+  <tbody>
+
+    <%@git_response['items'].each do |item| %>
+      <%if item['private'] == false %>
+      <tr>
+        <td><a href="<%= item['html_url']%>"><%=item['full_name'] %></a></td>
+        <td><%=item['owner']['login'] %></td>
+        <td><%=item['language'] %></td>
+      </tr>
+      <%end %>
+    <% end %>
+  </tbody>
+</table>
+
